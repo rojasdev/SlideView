@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Main content of your activity -->
+    <LinearLayout
+        android:id="@+id/mainContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <!-- Icon trigger to close the slide view -->
+        <ImageView
+            android:id="@+id/openIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:padding="16dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_add_circle_outline_24" />
+        <!-- Your main content goes here -->
+    </LinearLayout>
+
+    <!-- Semi-transparent background view -->
+    <View
+        android:id="@+id/transparentBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:visibility="gone" />
+
+    <!-- FrameLayout to contain the slide view -->
+    <FrameLayout
+        android:id="@+id/slideViewContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/transparent"
+        android:visibility="gone">
+
+        <!-- Slide view -->
+        <LinearLayout
+            android:id="@+id/slideView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@android:color/white">
+
+            <!-- Content of the slide view -->
+            <!-- You can add any views or widgets here -->
+
+            <!-- Icon trigger to close the slide view -->
+            <ImageView
+                android:id="@+id/closeIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:padding="16dp"
+                android:src="@drawable/ic_close" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"/>
+
+        </LinearLayout>
+    </FrameLayout>
+</RelativeLayout>
